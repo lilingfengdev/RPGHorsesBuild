@@ -20,9 +20,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean package -Pfull
+      run: mvn clean package 
     - name: Upload 
       uses: actions/upload-artifact@main
       with:
         name: build
-        path: dist/target/*.jar
+        path: build/libs/*.jar
